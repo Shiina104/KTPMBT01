@@ -11,6 +11,15 @@ bool checkSNT(int x)
 	return true;
 }
 
+bool checkNamNhuan(int nam)
+{
+	if (nam % 4 == 0 && nam % 100 != 0)
+		return true;
+	if (nam % 400 == 0)
+		return true;
+	return false;
+}
+
 int main()
 {
 	int x, chon;
@@ -24,21 +33,23 @@ int main()
 		cin >> chon;
 		system("cls");
 
-		if (chon != 3)
-		{
-			cout << "Nhap so x: ";
-			cin >> x;
-		}
 		switch (chon)
 		{
 		case 1:
+			cout << "Nhap so x: ";
+			cin >> x;
 			if (checkSNT(x))
 				cout << x << " la so nguyen to\n";
 			else
 				cout << x << " ko phai la so nguyen to\n";
 			break;
 		case 2:
-			cout << "Chua lam\n";
+			cout << "Nhap nam: ";
+			cin >> x;
+			if (checkNamNhuan(x))
+				cout << x << " la nam nhuan\n";
+			else
+				cout << x << " ko phai la nam nhuan\n";
 			break;
 		default:
 			break;
