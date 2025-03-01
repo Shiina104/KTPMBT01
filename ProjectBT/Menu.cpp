@@ -25,7 +25,9 @@ int main()
 	int x, chon;
 	do
 	{
-		cout << "Menu bai tap 1:\n"
+
+		cout << "Menu dau tien:\n"
+
 			"1. Check SNT\n"
 			"2. Kiem tra nam nhuan\n"
 			"3. Thoat menu\n";
